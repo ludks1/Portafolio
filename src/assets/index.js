@@ -13,11 +13,7 @@ import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
-
+//portafolio
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
@@ -28,8 +24,10 @@ import java from "./java.png";
 import python from "./python.png";
 import developer from "./developer.png";
 import fitness from "./fitness.png";
+import ittol from "./ittol.png";
 
 export {
+  ittol,
   python,
   java,
   developer,
@@ -47,10 +45,6 @@ export {
   reactjs,
   tailwind,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
   carrent,
   jobit,
   tripguide,
