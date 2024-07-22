@@ -4,8 +4,8 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Earth = ({ isMobile }) => {
-  const earth = useGLTF("./death_star/scene.gltf");
+const DeathStar = ({ isMobile }) => {
+  const deathStarModel = useGLTF("./death_star/scene.gltf");
 
   return (
     <mesh>
@@ -13,7 +13,7 @@ const Earth = ({ isMobile }) => {
       <spotLight position={[5, 10, 15]} angle={25} intensity={1000} />
       <pointLight intensity={10} />
       <primitive
-        object={earth.scene}
+        object={deathStarModel.scene}
         scale={isMobile ? 0.025 : 0.035}
         position-y={-0.5}
         rotation-y={0}
@@ -22,7 +22,7 @@ const Earth = ({ isMobile }) => {
   );
 };
 
-const EarthCanvas = () => {
+const DeathStarCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -65,11 +65,11 @@ const EarthCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Earth isMobile={isMobile} />
+        <DeathStar isMobile={isMobile} />
 
         <Preload all />
       </Suspense>
     </Canvas>
   );
 };
-export default EarthCanvas;
+export default DeathStarCanvas;

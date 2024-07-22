@@ -4,8 +4,8 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./porsche_gt3_rs/scene.gltf");
+const Porsche = ({ isMobile }) => {
+  const porscheModel = useGLTF("./porsche_gt3_rs/scene.gltf");
 
   return (
     <mesh>
@@ -20,7 +20,7 @@ const Computers = ({ isMobile }) => {
       />
       <pointLight intensity={6} />
       <primitive
-        object={computer.scene}
+        object={porscheModel.scene}
         scale={isMobile ? 1 : 2}
         position={isMobile ? [0, -1.5, 0] : [0, -2.55, 0]}
         rotation={[-0.03, 2, 0.03]}
@@ -29,7 +29,7 @@ const Computers = ({ isMobile }) => {
   );
 };
 
-const ComputersCanvas = () => {
+const PorsheCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -67,7 +67,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <Porsche isMobile={isMobile} />
       </Suspense>
 
       <Preload all />
@@ -75,4 +75,4 @@ const ComputersCanvas = () => {
   );
 };
 
-export default ComputersCanvas;
+export default PorsheCanvas;
