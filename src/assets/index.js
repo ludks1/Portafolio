@@ -15,11 +15,9 @@ import threejs from "./tech/threejs.svg";
 
 //portafolio
 import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import exchange from "./exchange.png";
 
 //nuevos imports
-
 import java from "./java.png";
 import python from "./python.png";
 import developer from "./developer.png";
@@ -46,6 +44,5 @@ export {
   tailwind,
   threejs,
   carrent,
-  jobit,
-  tripguide,
+  exchange,
 };
